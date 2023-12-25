@@ -8,6 +8,9 @@ import EditUser from "./pages/admin/users/EditUser";
 import ProductsList from "./pages/admin/products/ProductsList";
 import NewProduct from "./pages/admin/products/NewProduct";
 import EditProduct from "./pages/admin/products/EditProduct";
+import { useSelector } from "react-redux";
+import { Fragment } from "react";
+import AlertStyle1 from "./components/ui/alerts/AlertStyle1";
 
 const router = createBrowserRouter([
   { path: "/login" },
@@ -32,7 +35,18 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  const alertState = useSelector((state) => state.alert);
+
+  return (
+    <Fragment>
+      <RouterProvider router={router} />
+      <AlertStyle1
+        open={alertState.open}
+        type={alertState.type}
+        text={alertState.text}
+      />
+    </Fragment>
+  );
 }
 
 export default App;

@@ -1,0 +1,44 @@
+.alert {
+  background-color: #ffffff;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  right: 0;
+  transition: all 1.5s ease-in-out;
+
+  &.open {
+    top: 0;
+  }
+
+  &.success {
+    background-color: rgb(96, 190, 96);
+  }
+
+  &.error {
+    background-color: rgb(219, 85, 85);
+  }
+
+  &.warning {
+    background-color: rgb(221, 174, 86);
+  }
+
+  .alert-text {
+    color: #000000;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .close-btn {
+    background-color: transparent;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

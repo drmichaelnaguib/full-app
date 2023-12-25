@@ -5,28 +5,10 @@ import Table from "react-bootstrap/Table";
 import { useNavigate } from "react-router-dom";
 import { sendRequest } from "../../../services/api-service";
 
-// const dummyProducts = [
-//   {
-//     id: Math.random(),
-//     name: "Product1",
-//     info: "flatShoes",
-//     pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Satin_shoes_-_DPLA_-_52596009b0a7365b85ea1f558927bbca_%28page_1%29.jpg/800px-Satin_shoes_-_DPLA_-_52596009b0a7365b85ea1f558927bbca_%28page_1%29.jpg?20220719064643",
-//   },
-//   {
-//     id: Math.random(),
-//     name: "Product2",
-//     info: "dresses",
-//     pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Christian_Dior_evening_gown_called_%22Z%C3%A9mire%22%2C_Fall-Winter_1954_02.jpg/640px-Christian_Dior_evening_gown_called_%22Z%C3%A9mire%22%2C_Fall-Winter_1954_02.jpg",
-//   },
-//   {
-//     id: Math.random(),
-//     name: "Product3",
-//     info: "jeans",
-//     pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Angels-jeans-cici-indigo-denim-used-dark.jpg/640px-Angels-jeans-cici-indigo-denim-used-dark.jpg",
-//   },
-// ];
 const ProductsList = () => {
   const navigate = useNavigate();
+
+  // states
   const [products, setProducts] = useState([]);
 
   // use effect runs after rendering the component to prevent re-rendering after changing the state
@@ -88,16 +70,22 @@ const ProductsList = () => {
                   />
                 </td>
                 <td>
-                  <Button variant="outline-primary">Show</Button>
+                  <Button variant="outline-primary" size="sm">
+                    Show
+                  </Button>
                   <Button
                     variant="outline-warning"
                     onClick={() => {
                       navigate(`/admin/products/${product.id}/edit`);
                     }}
+                    size="sm"
+                    className="mx-2"
                   >
                     Edit
                   </Button>
-                  <Button variant="outline-danger">Delete</Button>
+                  <Button variant="outline-danger" size="sm">
+                    Delete
+                  </Button>
                 </td>
               </tr>
             );

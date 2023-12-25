@@ -3,10 +3,15 @@ import Form from "react-bootstrap/Form";
 import { sendRequest } from "../../../services/api-service";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { alertReduxActions } from "../../../redux/slices/alert-slice";
 
 const ProductForm = () => {
   const navigate = useNavigate();
   const params = useParams();
+  const dispatch = useDispatch();
+
+  // states
   const [productData, setProductData] = useState({
     name: "",
     info: "",
@@ -44,6 +49,13 @@ const ProductForm = () => {
     } else {
       sendRequest("products.json", "POST", productData).then((res) => {
         if (res) {
+          dispatch(
+            alertReduxActions.updateAlert({
+              open: true,
+              type: "success",
+              text: "Product added successfully!",
+            })
+          );
           navigate("/admin/products");
         }
       });
