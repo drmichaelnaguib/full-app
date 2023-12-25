@@ -1,0 +1,19 @@
+.panel-content {
+  transition: all 0.3s ease-in-out;
+  padding: 30px 30px 30px 10px;
+
+  &.side-bar-open {
+    padding-left: 300px;
+  }
+
+  .side-bar-toggler {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
