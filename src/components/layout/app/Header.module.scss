@@ -1,0 +1,33 @@
+.header {
+  background-color: white;
+  // fo2Ta7t   yeminShemal spread  opacity color
+  box-shadow: 2px 2px 7px 0 rgba($color: #000000, $alpha: 0.3);
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  .button {
+    position: relative;
+    border: none;
+    background-color: transparent;
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+    .cart-items {
+      position: absolute;
+      top: -1px;
+      right: -1px;
+      background-color: red;
+      color: black;
+      border-radius: 50%;
+      display: block;
+      width: 20px;
+      height: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

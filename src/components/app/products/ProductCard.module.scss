@@ -1,0 +1,64 @@
+.card-outer-container {
+  .card-container {
+    background-color: transparent;
+    box-shadow: 2px 2px 7px 0 rgba($color: #000000, $alpha: 0.3);
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      scale: 1.1;
+    }
+    .image-container {
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      img {
+        // 3shan elsowar matetla3sh bara el product card
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .add-to-cart-btn {
+        background-color: #ffffff;
+        box-shadow: -1px 4px 13px 9px rgba(0, 0, 0, 0.3);
+        border-radius: 6px;
+        border: none;
+        padding: 6px 10px;
+        color: #000000;
+        font-size: 16px;
+        font-weight: 600;
+        transition: all 0.3s ease-in-out;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+
+        &:hover {
+          background-color: #000000;
+          color: #ffffff;
+        }
+      }
+
+      &:hover {
+        .add-to-cart-btn {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+  .product-name {
+    font-size: 18px;
+    color: black;
+    text-align: center;
+  }
+}

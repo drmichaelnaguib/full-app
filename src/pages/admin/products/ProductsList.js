@@ -4,9 +4,11 @@ import Button from "react-bootstrap/Button";
 import Table from "react-bootstrap/Table";
 import { useNavigate } from "react-router-dom";
 import { sendRequest } from "../../../services/api-service";
+import { useDispatch } from "react-redux";
 
 const ProductsList = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   // states
   const [products, setProducts] = useState([]);

@@ -11,6 +11,7 @@ import EditProduct from "./pages/admin/products/EditProduct";
 import { useSelector } from "react-redux";
 import { Fragment } from "react";
 import AlertStyle1 from "./components/ui/alerts/AlertStyle1";
+import Home from "./pages/app/Home";
 
 const router = createBrowserRouter([
   { path: "/login" },
@@ -30,7 +31,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <AppRootLayout />,
-    children: [{ path: "/" }, { path: "/contact-us" }],
+    children: [{ path: "/", element: <Home /> }, { path: "/contact-us" }],
   },
 ]);
 

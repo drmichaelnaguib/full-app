@@ -6,6 +6,12 @@ const initialState = {
   text: "",
 };
 
+// updateAlert({
+//   open: true,
+//   type: "jfdsjfsd",
+//   text: "tydstyud",
+// });
+
 const alertSlice = createSlice({
   name: "alert",
   initialState: initialState,

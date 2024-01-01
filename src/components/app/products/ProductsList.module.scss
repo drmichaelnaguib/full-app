@@ -1,0 +1,8 @@
+.products-list {
+  display: grid;
+  //   hena assemna el 60px(20px ben kol card weltany) 3la el 4 cards elii= fel row wna2asnahom men 25%
+  grid-template-columns: calc(25% - 15px) calc(25% - 15px) calc(25% - 15px) calc(
+      25% - 15px
+    );
+  gap: 20px;
+}
