@@ -4,6 +4,7 @@ import styles from "./Cart.module.scss";
 import { FaPlus } from "react-icons/fa";
 import { FaMinus } from "react-icons/fa6";
 import { cartReduxActions } from "../../redux/slices/cart-slice";
+import { getFirstProductImg } from "../../services/product-service";
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -19,9 +20,9 @@ const Cart = () => {
               <div className={styles["cart-product"]} key={item.id}>
                 <div>
                   <div className={styles["image-container"]}>
-                    <img src={item.pic} />
+                    <img src={getFirstProductImg(item)} />
                   </div>
-                  <p>{item.name}</p>
+                  <p className="text-center">{item.name}</p>
                 </div>
                 <div className={styles.actions}>
                   <button

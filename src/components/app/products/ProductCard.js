@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
 import styles from "./ProductCard.module.scss";
 import { cartReduxActions } from "../../../redux/slices/cart-slice";
+import { getFirstProductImg } from "../../../services/product-service";
 
 const ProductCard = (props) => {
   const dispatch = useDispatch();
@@ -17,7 +18,7 @@ const ProductCard = (props) => {
     <div className={styles["card-outer-container"]}>
       <div className={styles["card-container"]}>
         <div className={styles["image-container"]}>
-          <img src={props.productCardFill.pic} />
+          <img src={getFirstProductImg(props.productCardFill)} />
           <button
             type="button"
             className={styles["add-to-cart-btn"]}

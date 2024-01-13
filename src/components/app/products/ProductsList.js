@@ -15,7 +15,7 @@ const ProductsList = () => {
             id: productId,
             name: res[productId].name,
             info: res[productId].info,
-            pic: res[productId].pic,
+            pics: res[productId].pics,
           });
         }
         setProductCardFill(mappedProducts);

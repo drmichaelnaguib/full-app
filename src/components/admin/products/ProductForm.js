@@ -15,7 +15,7 @@ const ProductForm = () => {
   const [productData, setProductData] = useState({
     name: "",
     info: "",
-    pic: "",
+    pics: "",
   });
 
   const inputHandler = (fieldName, event) => {
@@ -85,12 +85,12 @@ const ProductForm = () => {
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Product pic</Form.Label>
+        <Form.Label>Product pics</Form.Label>
         <Form.Control
           type="text"
-          placeholder="Place your Pic URL"
-          onChange={inputHandler.bind(this, "pic")}
-          value={productData.pic}
+          placeholder="Please Add multiple pic urls separated by ,,"
+          onChange={inputHandler.bind(this, "pics")}
+          value={productData.pics}
         />
       </Form.Group>
 

@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 // const item = {
 //   id: 1,
 //   name: "product 1",
-//   pic: "some pic",
+//   pics: "some pic,,other pic"
 //   info: "some info",
 //   qty: 2,
 // };

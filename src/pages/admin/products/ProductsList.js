@@ -5,6 +5,7 @@ import Table from "react-bootstrap/Table";
 import { useNavigate } from "react-router-dom";
 import { sendRequest } from "../../../services/api-service";
 import { useDispatch } from "react-redux";
+import { getFirstProductImg } from "../../../services/product-service";
 
 const ProductsList = () => {
   const navigate = useNavigate();
@@ -25,7 +26,7 @@ const ProductsList = () => {
             id: productId,
             name: res[productId].name,
             info: res[productId].info,
-            pic: res[productId].pic,
+            pics: res[productId].pics,
           });
           setProducts(mappedProducts);
         }
@@ -68,7 +69,7 @@ const ProductsList = () => {
                       width: "30px",
                       height: "30px",
                     }}
-                    src={product.pic}
+                    src={getFirstProductImg(product)}
                   />
                 </td>
                 <td>
