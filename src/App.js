@@ -12,6 +12,9 @@ import { useSelector } from "react-redux";
 import { Fragment } from "react";
 import AlertStyle1 from "./components/ui/alerts/AlertStyle1";
 import Home from "./pages/app/Home";
+import ContactUs from "./pages/app/ContactUs";
+import Cart from "./pages/app/Cart";
+import Login from "./pages/app/Login";
 
 const router = createBrowserRouter([
   { path: "/login" },
@@ -31,7 +34,12 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <AppRootLayout />,
-    children: [{ path: "/", element: <Home /> }, { path: "/contact-us" }],
+    children: [
+      { path: "/", element: <Home /> },
+      { path: "/contact-us", element: <ContactUs /> },
+      { path: "/cart", element: <Cart /> },
+      { path: "/Login", element: <Login /> },
+    ],
   },
 ]);
 

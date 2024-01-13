@@ -2,7 +2,7 @@ import { alertReduxActions } from "../redux/slices/alert-slice";
 import { queryParamsToQueryString } from "../utils/qs-helpers";
 import store from "../redux/store";
 
-const BASE_URL = "https://full-app-57c40-default-rtdb.firebaseio.com/";
+const BASE_URL = "https://full-app2-default-rtdb.firebaseio.com/";
 
 async function sendRequest(path, method, requestBody = {}, queryParams = {}) {
   let requestConfig = {
