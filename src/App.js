@@ -15,6 +15,7 @@ import Home from "./pages/app/Home";
 import ContactUs from "./pages/app/ContactUs";
 import Cart from "./pages/app/Cart";
 import Login from "./pages/app/Login";
+import ProductDetails from "./pages/app/ProductDetails";
 
 const router = createBrowserRouter([
   { path: "/login" },
@@ -39,6 +40,7 @@ const router = createBrowserRouter([
       { path: "/contact-us", element: <ContactUs /> },
       { path: "/cart", element: <Cart /> },
       { path: "/Login", element: <Login /> },
+      { path: "/product-details/:productId", element: <ProductDetails /> },
     ],
   },
 ]);

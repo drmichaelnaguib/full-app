@@ -2,6 +2,7 @@ import { useDispatch } from "react-redux";
 import styles from "./ProductCard.module.scss";
 import { cartReduxActions } from "../../../redux/slices/cart-slice";
 import { getFirstProductImg } from "../../../services/product-service";
+import { Link } from "react-router-dom";
 
 const ProductCard = (props) => {
   const dispatch = useDispatch();
@@ -28,7 +29,12 @@ const ProductCard = (props) => {
           </button>
         </div>
       </div>
-      <p className={styles["product-name"]}>{props.productCardFill.name}</p>
+      <Link
+        to={`/product-details/${props.productCardFill.id}`}
+        className={styles["product-name"]}
+      >
+        {props.productCardFill.name}{" "}
+      </Link>
     </div>
   );
 };

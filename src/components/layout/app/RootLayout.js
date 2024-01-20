@@ -7,7 +7,7 @@ const RootLayout = () => {
   return (
     <div>
       <Header />
-      <Container className="py-5">
+      <Container style={{ paddingBottom: "100px" }}>
         <Outlet />
       </Container>
       <Footer />
