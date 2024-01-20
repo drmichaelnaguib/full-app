@@ -19,6 +19,11 @@ const SideBar = (props) => {
         <p className={styles.email}>someone@example.com</p>
       </div>
       <ul className={styles["links-container"]}>
+        <li className={location.pathname === "/" ? styles.active : ""}>
+          <Link to={"/"} className={styles.tab}>
+            My Website
+          </Link>
+        </li>
         <li className={location.pathname === "/admin" ? styles.active : ""}>
           <Link to={"/admin"} className={styles.tab}>
             Dashboard
